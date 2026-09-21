@@ -1,0 +1,53 @@
+# ---------------------------------------------------------------------------
+# Build output
+# ---------------------------------------------------------------------------
+dist/
+# types Astro generates for content collections
+.astro/
+
+# ---------------------------------------------------------------------------
+# Dependencies
+# ---------------------------------------------------------------------------
+node_modules/
+
+# ---------------------------------------------------------------------------
+# Logs
+# ---------------------------------------------------------------------------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---------------------------------------------------------------------------
+# Secrets — THIS REPO IS PUBLIC. Nothing secret may ever be committed.
+# API tokens and keys live in Vercel's Environment Variables, not in files.
+# ---------------------------------------------------------------------------
+.env
+.env.*
+# a committed template listing variable NAMES only, never values
+!.env.example
+
+# ---------------------------------------------------------------------------
+# Vercel CLI working directory (contains your local project link)
+# ---------------------------------------------------------------------------
+.vercel
+
+# ---------------------------------------------------------------------------
+# Local-only working files.
+#
+# Put anything here that must NOT be published: most importantly the members
+# roster spreadsheet, which contains student roll numbers. Roll numbers are
+# personal data and this repository is visible to the whole internet.
+#
+# Everything inside private/ is ignored except its README, which stays committed
+# so the folder and the reason for it are visible to anyone reading the repo.
+# ---------------------------------------------------------------------------
+private/*
+!private/README.md
+
+# ---------------------------------------------------------------------------
+# Editor / OS noise
+# ---------------------------------------------------------------------------
+.DS_Store
+.idea/
+*.swp
