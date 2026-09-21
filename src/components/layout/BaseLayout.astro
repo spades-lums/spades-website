@@ -1,0 +1,50 @@
+---
+/**
+ * BaseLayout — the outer shell every page sits inside.
+ *
+ * It owns the things that must be identical on every page: the <html> document,
+ * the <head> (character set, viewport, title, description, favicon), and the one
+ * import of the global stylesheet. Page content is passed in through <slot />.
+ *
+ * Nav and Footer are deliberately not here yet; they arrive in Phase 2 and will be
+ * added around the slot.
+ *
+ * Use it like this:
+ *   ---
+ *   import BaseLayout from '../components/layout/BaseLayout.astro';
+ *   ---
+ *   <BaseLayout title="Teams" description="The teams that make up SPADES.">
+ *     <h1>Teams</h1>
+ *   </BaseLayout>
+ */
+import '../../styles/global.css';
+
+interface Props {
+  /** Shown in the browser tab and in search results. Keep it under ~60 characters. */
+  title: string;
+  /** The grey line under the title in search results. Aim for 120–155 characters. */
+  description: string;
+}
+
+const { title, description } = Astro.props;
+
+// Turns "/teams" into the full "https://…/teams" that search engines and social
+// previews need. Astro.site comes from `site` in astro.config.mjs.
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalUrl} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,82 @@
+/*
+  Global styles: a small reset, then base typography using the tokens.
+
+  This file is imported once, by BaseLayout.astro. Everything else should be styled
+  in the component it belongs to, using a `<style>` block (Astro scopes those to the
+  component automatically).
+
+  Order matters: tokens first, because fonts.css and the rules below refer to them.
+*/
+
+@import './tokens.css';
+@import './fonts.css';
+@import './motion.css';
+
+/* ---- Reset ------------------------------------------------------------ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Images should never overflow their container. */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form controls don't inherit fonts by default. Make them. */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* ---- Base ------------------------------------------------------------- */
+
+html {
+  /* Jump to an anchor smoothly; motion.css turns this off for reduced motion. */
+  scroll-behavior: smooth;
+  /* Rendering with the light background avoids a white flash on overscroll. */
+  background-color: var(--color-bg);
+}
+
+body {
+  font-family: var(--font-sans);
+  /* Never below ~13px anywhere on the site — see docs/design-system.md. */
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-ink);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-accent-on-light);
+}
+
+/* Keyboard users must always be able to see where they are. */
+:focus-visible {
+  outline: 2px solid var(--color-accent-on-light);
+  outline-offset: 2px;
+}

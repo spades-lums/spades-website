@@ -1,0 +1,50 @@
+/*
+  Design tokens — the single source of truth for colour, radius and type.
+
+  Every colour in this project comes from a variable defined here. Components must
+  never contain a raw hex value: if a colour needs to change, it changes in one place.
+
+  Tokens are named by ROLE ("background", "accent on dark"), not by appearance
+  ("navy", "light blue"), so the name still makes sense if the value is retuned.
+
+  Phase 1 defines colour, radius and font family. Spacing, type scale and shadows
+  arrive in Phase 2.
+*/
+
+:root {
+  /* ---- Colour -------------------------------------------------------- */
+
+  /* Deep navy. Heroes, nav, footer. */
+  --color-bg-deep: #07142f;
+  /* Main dark. Body text and headings on light backgrounds. */
+  --color-ink: #0b1d45;
+  /* Main light background. */
+  --color-bg: #f2f5fa;
+  /* Alternate light background, to separate neighbouring sections. */
+  --color-bg-alt: #e7eef8;
+  /* Pale blue. Primary buttons and accent words on dark backgrounds. */
+  --color-accent-on-dark: #7fd6ff;
+  /* Strong blue. Accents on light backgrounds and the hand-drawn marks. */
+  --color-accent-on-light: #1b5fd1;
+  /* Secondary / supporting text on light backgrounds. */
+  --color-muted-on-light: #4e5e7e;
+  /* Secondary / supporting text on dark backgrounds. */
+  --color-muted-on-dark: #afc0dd;
+  /* Headings and primary text on the deep navy background. */
+  --color-text-on-deep: #ffffff;
+
+  /* ---- Corner radius -------------------------------------------------- */
+  /* Slight rounding only — see docs/design-system.md. No pill shapes. */
+
+  /* Buttons, chips. */
+  --radius-sm: 6px;
+  /* Cards, photos. */
+  --radius-md: 10px;
+
+  /* ---- Type ----------------------------------------------------------- */
+
+  /* Everything. */
+  --font-sans: 'Manrope Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  /* Accent words only, always italic. */
+  --font-accent: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+}

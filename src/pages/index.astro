@@ -1,0 +1,54 @@
+---
+// Temporary homepage. It exists so there is something to deploy and look at while
+// the real site is built. Phase 2 replaces this entirely.
+import BaseLayout from '../components/layout/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="SPADES — LUMS"
+  description="The Society for the Promotion and Development of Engineering and Sciences at LUMS, Lahore. Our new website is on its way."
+>
+  <main>
+    <h1>SPADES</h1>
+    <p class="lead">
+      Society for the Promotion and Development of <em>Engineering and Sciences</em>
+    </p>
+    <p class="note">New website — coming soon.</p>
+  </main>
+</BaseLayout>
+
+<style>
+  /* Astro scopes these rules to this file only, so they cannot leak into other pages. */
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    min-height: 100vh;
+    padding: 48px 24px;
+    background-color: var(--color-bg-deep);
+    color: var(--color-muted-on-dark);
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 10vw, 5rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--color-text-on-deep);
+  }
+
+  .lead {
+    max-width: 32ch;
+    font-size: clamp(1.125rem, 3vw, 1.5rem);
+  }
+
+  .lead em {
+    font-family: var(--font-accent);
+    font-style: italic;
+    color: var(--color-accent-on-dark);
+  }
+
+  .note {
+    font-size: 0.9375rem;
+  }
+</style>
