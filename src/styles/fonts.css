@@ -1,0 +1,14 @@
+/*
+  Fonts.
+
+  Both faces are self-hosted through Fontsource: the font files are installed as npm
+  packages and bundled with the site, so nothing is requested from Google at runtime.
+  That is faster, works if a visitor's network blocks Google, and avoids sending
+  visitors' IP addresses to a third party.
+
+  Manrope is a variable font: one file covers every weight from 200 to 800.
+  Instrument Serif is used only in italic, only for accent words.
+*/
+
+@import '@fontsource-variable/manrope';
+@import '@fontsource/instrument-serif/400-italic.css';

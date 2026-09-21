@@ -1,0 +1,22 @@
+/*
+  Motion.
+
+  Phase 1 contains only the accessibility guard below. Named transitions and
+  animations arrive in Phase 2.
+
+  Some people get motion sickness, migraines or vertigo from moving interfaces, and
+  set "reduce motion" in their operating system. This rule honours that setting by
+  cutting every animation and transition down to effectively nothing, everywhere,
+  without us having to remember it in each component.
+*/
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
