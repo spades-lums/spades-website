@@ -1,0 +1,41 @@
+# Hand-picked Instagram posts (@spadeslums) for the homepage feed.
+# Used during development and as the fallback if Behold is unavailable.
+# Newest first. Instagram image URLs expire, so images are stored locally.
+#
+# Each entry needs:
+#   id      - the code from the post's URL, e.g. .../p/Dde2c3yiKr3/ -> Dde2c3yiKr3
+#   url     - the full link to the post
+#   type    - "post" or "reel"
+#   caption - a short line shown under the image; "[TBC]" until written
+#   image   - optional, a path to a saved copy of the post image
+#             e.g. ../../assets/images/instagram/Dde2c3yiKr3.jpg
+
+- id: Dde2c3yiKr3
+  url: https://www.instagram.com/p/Dde2c3yiKr3/
+  type: post
+  caption: '[TBC]'
+
+- id: DdHcDSXyOgY
+  url: https://www.instagram.com/reel/DdHcDSXyOgY/
+  type: reel
+  caption: '[TBC]'
+
+- id: DdBfD0UoTU9
+  url: https://www.instagram.com/reel/DdBfD0UoTU9/
+  type: reel
+  caption: '[TBC]'
+
+- id: DYPjOkKI0Wz
+  url: https://www.instagram.com/reel/DYPjOkKI0Wz/
+  type: reel
+  caption: '[TBC]'
+
+- id: DOfyOEUCMUI
+  url: https://www.instagram.com/reel/DOfyOEUCMUI/
+  type: reel
+  caption: '[TBC]'
+
+- id: DN8fgKJiMwK
+  url: https://www.instagram.com/reel/DN8fgKJiMwK/
+  type: reel
+  caption: '[TBC]'
