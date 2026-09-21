@@ -1,0 +1,38 @@
+---
+// Shown when a visitor asks for a page that does not exist. Vercel serves this
+// automatically for unmatched URLs on a static site. Phase 2 restyles it.
+import BaseLayout from '../components/layout/BaseLayout.astro';
+---
+
+<BaseLayout title="Page not found — SPADES" description="That page does not exist.">
+  <main>
+    <h1>404</h1>
+    <p>We couldn't find that page.</p>
+    <p>
+      <a href="/">Back to the homepage</a>
+    </p>
+  </main>
+</BaseLayout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    min-height: 100vh;
+    padding: 48px 24px;
+    background-color: var(--color-bg-deep);
+    color: var(--color-muted-on-dark);
+  }
+
+  h1 {
+    font-size: clamp(3rem, 12vw, 6rem);
+    font-weight: 800;
+    color: var(--color-text-on-deep);
+  }
+
+  a {
+    color: var(--color-accent-on-dark);
+  }
+</style>
